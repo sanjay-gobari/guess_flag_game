@@ -18,7 +18,7 @@ const db = new pg.Client({
     port: 5432
 })
 db.connect();
-db.query("SELECT * FROM flags lIMIT 2", (err, result) => {
+db.query("SELECT * FROM flags", (err, result) => {
     if (!err) {
         quiz = result.rows
     }
