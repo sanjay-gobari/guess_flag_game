@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --common-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.50);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*:focus {
+    outline-color: rgba(0, 230, 0, 0.5);
+}
+
+.heading {
+    text-align: center;
+}
+
+.score {
+    text-align: center;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-out {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(228, 226, 226);
+}
+
+.container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.20);
+    padding: 2em;
+    border-radius: 0.6em;
+}
+
+.container2 {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.20);
+    padding: 2em;
+    border-radius: 0.6em;
+}
+
+.flag-box {
+    box-shadow: var(--common-shadow);
+    padding: 1em;
+    height: 400px;
+    border-radius: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag-box p {
+    font-size: 18rem;
+}
+
+form {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+}
+
+form input,
+button {
+    width: 100%;
+    padding: 0.6em;
+    font-size: inherit;
+    border-radius: 0.4em;
+}
+
+form input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: var(--common-shadow);
+}
+.score-n {
+    font-size: 1.4em;
+    color: green;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: rgb(0, 230, 77);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 0.3em;
+    max-width: fit-content;
+}
+
+@media screen and (max-width:400px){
+    .flag-box{height: 280px;}
+    .score{font-size: 1.4rem;}
+    .heading{font-size: 1rem;}
+    .flag-box p{font-size: 10rem;}
+}

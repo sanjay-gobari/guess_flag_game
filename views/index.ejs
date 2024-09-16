@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container-out">
+        <% if(data.flag){ %>
+        <div class="container">
+            <div class="heading">
+                <h1>Guess The Flag</h1>
+            </div>
+            <div class="score">
+                <span>Total Score</span><span class="score-n"><%= data.score%></span>
+            </div>
+            <div class="flag-box">
+                <p><%= data.flag  %></p>
+            </div>
+            <form action="/submit" method="post">
+                <input name="flag_name" type="text" autofocus autocomplete="off" required>
+                <button class="btn">submit</button>
+            </form>
+        </div>
+        <% }else{ %>
+            <div class="container2">
+                <h1>Your Score is: <%=data.score  %></h1>
+                <button class="btn"><a href="/retry">Retry</a></button>
+            </div>
+            <% } %>
+    </div>
+</body>
+</html>
